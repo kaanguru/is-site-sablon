@@ -12,7 +12,7 @@ export interface Props {
 const title = Astro.props.title || settings.title;
 const analytics = Astro.props || settings.analytics;
 const description = Astro.props || settings.description;
-const { canonicalURL = settings.url } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // const image = new URL(Astro.props || './social.png', Astro.site);
 ---
 
