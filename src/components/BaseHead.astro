@@ -9,7 +9,7 @@ export interface Props {
 	analytics?: string;
 }
 
-const title = Astro.props || settings.title;
+const title = Astro.props.title || settings.title;
 const analytics = Astro.props || settings.analytics;
 const description = Astro.props || settings.description;
 const { canonicalURL = settings.url } = Astro.props;
